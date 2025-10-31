@@ -34,7 +34,7 @@
     <div class="flex flex-wrap justify-center gap-4" data-id="cta">
       <VBtn variant="primary" aria-label="Use this template on GitHub">
         <a
-          href="https://github.com/new?template_name=VNT&template_owner=MFM-347"
+          href="https://github.com/MFM-347/VNT/generate"
           target="_blank"
           rel="noopener noreferrer"
         >
