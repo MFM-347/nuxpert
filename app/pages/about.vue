@@ -3,7 +3,6 @@ const isHovered = ref(false)
 const isActive = computed(() => isHovered.value)
 
 const now = new Date()
-const date = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`
 </script>
 
 <template>
@@ -50,7 +49,7 @@ const date = `${now.getDate()}/${now.getMonth() + 1}/${now.getFullYear()}`
         class="absolute right-4 bottom-4 font-mono text-[12px] transition-colors duration-300"
         :class="isActive ? 'text-y1' : 'text-muted-foreground/80'"
       >
-        {{ date }}
+        1/17/2026
       </span>
 
       <div
