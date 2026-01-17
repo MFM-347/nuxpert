@@ -1,8 +1,6 @@
 <script setup lang="ts">
 const isHovered = ref(false)
 const isActive = computed(() => isHovered.value)
-
-const now = new Date()
 </script>
 
 <template>
