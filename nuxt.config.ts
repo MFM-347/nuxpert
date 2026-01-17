@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   nitro: {
+    minify: true,
     prerender: {
       crawlLinks: true,
       routes: ['/'],
@@ -15,35 +16,42 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      cssMinify: 'esbuild',
-    },
   },
 
-  css: ['@/style.css'],
+  css: ['@/main.css'],
 
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
     '@nuxt/icon',
-    '@nuxtjs/seo',
-    '@nuxtjs/fontaine',
     '@vueuse/nuxt',
-    '@nuxtjs/color-mode',
+    '@nuxt/hints',
+    '@nuxt/a11y',
+    '@nuxtjs/sitemap',
+    'nuxt-og-image',
   ],
 
   site: {
-    name: 'VNT',
-    url: 'https://vnt3.vercel.app',
+    name: 'Nuxpert',
+    url: 'https://nuxpert.vercel.app/',
     description:
-      'VNT is a modern, SEO-friendly Nuxt 4 starter template with TypeScript, Tailwind CSS, and accessibility built in.',
-    tagline: 'Modern Nuxt 4 Template',
+      'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
+    tagline: 'Nuxt 4 Starter Template for Production',
+  },
+
+  sitemap: {
+    zeroRuntime: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: new Date().toISOString()
+    }
   },
 
   icon: {
-    size: '24px',
     class: 'inline-block',
     clientBundle: { scan: true },
+    serverBundle: false,
   },
 
   fonts: {
@@ -52,7 +60,8 @@ export default defineNuxtConfig({
       weights: [400, 500, 600, 700, 800],
       styles: ['normal', 'italic'],
       fallbacks: {
-        'sans-serif': ['Roboto', 'Segoe UI'],
+        'sans-serif': ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
+        // monospace: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
       },
     },
     assets: {
@@ -60,20 +69,17 @@ export default defineNuxtConfig({
     },
   },
 
-  colorMode: {
-    preference: 'dark',
-    fallback: 'light',
-    hid: 'nuxt-color-mode-script',
-    globalName: '__NUXT_COLOR_MODE__',
-    componentName: 'ColorScheme',
-    classPrefix: '',
-    classSuffix: '',
-    storage: 'localStorage',
-    storageKey: 'v-theme',
+  typescript: {
+    strict: true,
+  },
+
+  experimental: {
+    extractAsyncDataHandlers: true,
+    payloadExtraction: true,
   },
 
   routeRules: {
-    '/**/*.{css,svg,woff,woff2}': {
+    '/**/*.{css,png,icon,svg,woff,woff2}': {
       cache: {
         swr: true,
         maxAge: 60 * 60 * 72, // 3 days

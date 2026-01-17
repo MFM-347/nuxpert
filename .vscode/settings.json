@@ -1,15 +1,12 @@
 {
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "nuxt.config.*": " prettier*, eslint*, .editorconfig",
+    "package.json": "pnpm*"
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll": "always"
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.patterns": {
-    "nuxt.config.ts": ".env*,eslint*, prettier*, .editorconfig",
-    "package.json": "package-lock.json, pnpm*"
-  },
-  "[nix]": {
-    "editor.defaultFormatter": "google.nix-language"
-  }
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

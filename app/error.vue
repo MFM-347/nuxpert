@@ -1,3 +1,5 @@
+<!-- https://tailwindcss.com/404 -->
+
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
@@ -11,39 +13,22 @@ useHead({
 </script>
 
 <template>
-  <main class="flex min-h-screen w-full items-center justify-center px-4 py-12" role="main">
-    <section
-      class="w-full max-w-md space-y-8 text-center"
-      aria-labelledby="error-title"
-      aria-live="assertive"
-      role="alert"
-    >
-      <div class="relative mx-auto h-48 w-48">
-        <div class="absolute inset-0 rounded-full bg-primary/10 blur-2xl" aria-hidden="true" />
-        <div class="relative flex h-full w-full items-center justify-center">
-          <Icon class="text-9xl text-primary" name="uil:exclamation-triangle" aria-hidden="true" />
+  <div class="dark flex min-h-dvh flex-col bg-background">
+    <div class="text-foreground lg:mx-10 lg:border-x">
+      <div class="flex h-[calc(100vh-4.01rem)] items-center justify-center border-x">
+        <div
+          class="flex flex-auto flex-col items-center justify-center px-4 text-center sm:flex-row"
+        >
+          <h1
+            class="text-2xl font-extrabold tracking-tight sm:mr-6 sm:border-r sm:pr-6 sm:text-3xl"
+          >
+            {{ error.statusCode ?? '404' }}
+          </h1>
+          <h2 class="mt-2 text-muted-foreground sm:mt-0">
+            {{ error.statusMessage || 'This page could not be found.' }}
+          </h2>
         </div>
       </div>
-      <div class="space-y-3">
-        <h1
-          id="error-title"
-          class="text-5xl font-extrabold tracking-tight text-primary sm:text-7xl"
-        >
-          <span class="sr-only">Error code:</span>
-          {{ error.statusCode }}
-        </h1>
-        <p class="text-lg font-medium text-muted-foreground sm:text-xl">
-          {{ error.statusMessage || 'Something went wrong. Please try again.' }}
-        </p>
-      </div>
-      <div class="flex flex-col justify-center gap-3 sm:flex-row">
-        <VBtn>
-          <NuxtLink to="/" aria-label="Go to homepage">
-            <Icon class="size-5" name="uil:arrow-left" aria-hidden="true" />
-            Go Home
-          </NuxtLink>
-        </VBtn>
-      </div>
-    </section>
-  </main>
+    </div>
+  </div>
 </template>

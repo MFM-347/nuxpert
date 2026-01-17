@@ -1,5 +1,9 @@
-/** @type {import('prettier').Config} */
-module.exports = {
+/**
+ * @see https://prettier.io/docs/configuration
+ * @type {import("prettier").Config}
+ */
+
+export default {
   semi: false,
   singleQuote: true,
   tabWidth: 2,
@@ -25,17 +29,18 @@ module.exports = {
     '^(v-bind)?:class$',
     '^((v-bind)?:)?(?!data-|v-|:|@|#)',
     '$DEFAULT',
+    '^title$',
+    '^aria-',
     '^((v-bind)?:)?data-',
     '^v-bind$',
     '^v-on:',
     '^@',
     '^v-html$',
     '^v-text$',
-    '^aria-',
-    '^data-',
   ],
+  cssDeclarationSorterOrder: 'frakto',
   cssDeclarationSorterKeepOverrides: false,
-  tailwindStylesheet: './app/style.css',
+  tailwindStylesheet: './app/main.css',
   tailwindPreserveWhitespace: true,
   tailwindPreserveDuplicates: true,
 }

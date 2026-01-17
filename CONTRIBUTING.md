@@ -1,13 +1,13 @@
-# Contributing to VNT
+# Contributing to Nuxpert
 
-Thank you for considering contributing to VNT! 🎉
+Thank you for considering contributing to Nuxpert! 🎉
 Your contributions, whether big or small, are essential to the success of this project. We welcome **bug reports**, **feature requests**, **documentation updates**, and **code improvements**.
 
 ## Contribution Guide
 
 ### Step 1: Fork the Repository
 
-1. Navigate to the [VNT repository](https://github.com/MFM-347/VNT).
+1. Navigate to the [Nuxpert repository](https://github.com/MFM-347/nuxpert).
 2. Click the **Fork** button in the top-right corner to create your own copy of the repository.
 
 ### Step 2: Clone Your Fork
@@ -15,8 +15,8 @@ Your contributions, whether big or small, are essential to the success of this p
 Clone your forked repository to your local machine:
 
 ```bash
-git clone https://github.com/MFM-347/VNT.git
-cd VNT
+git clone https://github.com/MFM-347/nuxpert.git
+cd Nuxpert
 ```
 
 ### Step 3: Set Up Your Environment
@@ -95,7 +95,7 @@ Push your branch to your fork:
 git push origin <branch-name>
 ```
 
-Then, navigate to the **original VNT repository** and submit a pull request.
+Then, navigate to the **original Nuxpert repository** and submit a pull request.
 Include the following in your PR description:
 
 - A summary of changes.
@@ -104,7 +104,7 @@ Include the following in your PR description:
 
 ## Reporting Issues
 
-Encountered a bug or have a great idea for a new feature? Create an issue [here](https://github.com/MFM-347/VNT/issues).
+Encountered a bug or have a great idea for a new feature? Create an issue [here](https://github.com/MFM-347/nuxpert/issues).
 
 ### Guidelines for Issues:
 
@@ -138,7 +138,7 @@ To maintain a high-quality codebase, please follow these guidelines:
 
 If you’re unsure about something or need guidance:
 
-- Start a [discussion](https://github.com/MFM-347/VNT/discussions).
+- Start a [discussion](https://github.com/MFM-347/nuxpert/discussions).
 - Join our community for support and collaboration.
 
-Thank you ✨ for contributing to VNT! Your effort makes this project better for everyone.
+Thank you ✨ for contributing to Nuxpert! Your effort makes this project better for everyone.

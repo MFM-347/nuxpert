@@ -1,15 +1,15 @@
-# VNT - Modern Nuxt 4 Template
+# Nuxpert - Modern Nuxt 4 Template
 
-VNT is a modern, SEO-friendly Nuxt 4 starter template with TypeScript, Tailwind CSS, and accessibility built in.
+Nuxpert is a sleek, high-performance Nuxt 4 template with TypeScript, Tailwind CSS, accessibility, and SEO optimization built in.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/MFM-347/VNT?style=social)](https://github.com/MFM-347/VNT/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/MFM-347/nuxpert?style=social)](https://github.com/MFM-347/nuxpert/stargazers)
 
 ## 🤝 Contributing
 
 We love community input!
 
-- Check [CONTRIBUTING.md](https://github.com/MFM-347/VNT/blob/main/CONTRIBUTING.md)
+- Check [CONTRIBUTING.md](https://github.com/MFM-347/nuxpert/blob/main/CONTRIBUTING.md)
 - Look for issues labeled **good first issue**
 - Open a Pull Request with your improvement or idea.
 
