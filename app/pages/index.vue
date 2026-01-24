@@ -96,7 +96,7 @@ const included = [
         </a>
         <a
           class="transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn2"
-          href="https://github.com/mfm-347/nuxpret"
+          href="https://github.com/mfm-347/nuxpert"
           target="_blank"
           rel="noopener"
           aria-label="View Nuxpert on GitHub"
@@ -130,7 +130,7 @@ const included = [
       </div>
     </section>
 
-    <section id="who-is-nuxpret-for">
+    <section id="who-is-nuxpert-for">
       <div class="container px-4 md:px-6 lg:px-8">
         <h2>Who Nuxpert Is For</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -165,7 +165,7 @@ const included = [
         <p class="mb-4 text-center text-muted-foreground">Start a new project in minutes:</p>
         <pre class="mb-6 overflow-x-auto rounded-lg bg-gray-900 p-6 text-gray-100">
 <code>git clone https://github.com/MFM-347/nuxpert.git
-cd nuxpret
+cd nuxpert
 pnpm install
 nr dev</code>
 </pre>
@@ -183,7 +183,7 @@ nr dev</code>
           <a href="https://github.com/mfm-347/nuxpert/generate" target="_blank" rel="noopener">
             <VBtn class="transition-all duration-160 hover:scale-105">Use this template</VBtn>
           </a>
-          <a href="https://github.com/mfm-347/nuxpret">
+          <a href="https://github.com/mfm-347/nuxpert">
             <VBtn class="transition-all duration-160 hover:scale-105" variant="secondary"
               >View GitHub</VBtn
             >
