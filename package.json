@@ -15,27 +15,24 @@
   },
   "dependencies": {
     "@nuxt/a11y": "1.0.0-alpha.1",
-    "@nuxt/eslint": "1.12.1",
-    "@nuxt/fonts": "0.12.1",
-    "@nuxt/hints": "1.0.0-alpha.5",
-    "@nuxt/icon": "2.2.0",
-    "@nuxtjs/sitemap": "7.5.2",
-    "@unhead/vue": "^2.1.2",
-    "@vueuse/core": "^14.1.0",
-    "@vueuse/nuxt": "14.1.0",
+    "@nuxt/eslint": "1.13.0",
+    "@nuxt/fonts": "0.13.0",
+    "@nuxt/icon": "2.2.1",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@vueuse/core": "^14.2.0",
+    "@vueuse/nuxt": "14.2.0",
     "eslint": "^9.39.2",
-    "nuxt": "^4.2.2",
-    "nuxt-og-image": "5.1.13",
+    "nuxt": "^4.3.0",
     "tailwindcss": "latest",
     "unstorage": "^1.17.4",
     "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "vue-router": "^5.0.1"
   },
   "devDependencies": {
     "@antfu/ni": "^28.1.0",
     "@iconify-json/carbon": "^1.2.15",
     "@tailwindcss/vite": "latest",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.1",
     "prettier-plugin-css-order": "^2.2.0",
     "prettier-plugin-organize-attributes": "^1.0.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
@@ -46,5 +43,5 @@
       "vite": "npm:rolldown-vite@latest"
     }
   },
-  "packageManager": "pnpm@10.27.0"
+  "packageManager": "pnpm@10.28.2"
 }
