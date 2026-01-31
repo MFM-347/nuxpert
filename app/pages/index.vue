@@ -10,7 +10,7 @@ useSeo({ meta })
 defineOgImageComponent('NuxtSeo', {
   title: 'Nuxpert - Modern Nuxt 4 Starter',
   description: 'A production-ready Nuxt 4 starter for serious developers.',
-  colorMode: 'dark'
+  colorMode: 'dark',
 })
 
 const included = [
