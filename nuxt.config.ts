@@ -11,24 +11,26 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/'],
-    },
+    }
   },
 
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['@vueuse/core'],
+    },
   },
 
   css: ['@/main.css'],
 
   modules: [
     '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/icon',
-    '@vueuse/nuxt',
-    '@nuxt/hints',
     '@nuxt/a11y',
-    '@nuxtjs/sitemap',
-    'nuxt-og-image',
+    '@nuxtjs/seo',
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
   ],
 
   site: {
@@ -44,29 +46,41 @@ export default defineNuxtConfig({
     defaults: {
       changefreq: 'weekly',
       priority: 1,
-      lastmod: new Date().toISOString()
-    }
+      lastmod: new Date().toISOString(),
+    },
+  },
+
+  ogImage: {
+    zeroRuntime: true,
   },
 
   icon: {
-    class: 'inline-block',
     clientBundle: { scan: true },
     serverBundle: false,
   },
 
   fonts: {
-    defaults: {
-      preload: true,
-      weights: [400, 500, 600, 700, 800],
-      styles: ['normal', 'italic'],
-      fallbacks: {
-        'sans-serif': ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
-        // monospace: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
+    priority: ['google'],
+    families: [
+      {
+        name: 'Inter',
+        weights: [400, 500, 600, 700, 800],
+        fallbacks: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
+        global: true,
       },
-    },
-    assets: {
-      prefix: '/_fonts',
-    },
+      {
+        name: 'IBM Plex Mono',
+        fallbacks: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
+        weights: [400, 500],
+        global: true,
+      },
+    ],
+  },
+
+  colorMode: {
+    preference: 'system',
+    fallback: 'dark',
+    storageKey: 'nuxpert-color-mode',
   },
 
   typescript: {
@@ -82,7 +96,7 @@ export default defineNuxtConfig({
     '/**/*.{css,png,icon,svg,woff,woff2}': {
       cache: {
         swr: true,
-        maxAge: 60 * 60 * 72, // 3 days
+        maxAge: 60 * 60 * 24 * 3, // 3 days
       },
     },
   },

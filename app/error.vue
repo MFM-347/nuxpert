@@ -1,14 +1,27 @@
-<!-- https://tailwindcss.com/404 -->
-
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-const props = defineProps({
-  error: Object as () => NuxtError,
+const props = defineProps<{
+  error: NuxtError
+}>()
+
+const status = computed(() => props.error.status || 500)
+const statusText = computed(() => {
+  if (props.error.statusText) return props.error.statusText
+  switch (status.value) {
+    case 404:
+      return 'Page not found'
+    case 500:
+      return 'Internal server error'
+    case 503:
+      return 'Service unavailable'
+    default:
+      return 'Something went wrong'
+  }
 })
 
 useHead({
-  title: `${props.error?.statusCode || 500} - ${props.error?.statusMessage || 'Error'}`,
+  title: `${status.value} - ${statusText.value}`,
 })
 </script>
 
@@ -22,10 +35,10 @@ useHead({
           <h1
             class="text-2xl font-extrabold tracking-tight sm:mr-6 sm:border-r sm:pr-6 sm:text-3xl"
           >
-            {{ error.statusCode ?? '404' }}
+            {{ error.status ?? '404' }}
           </h1>
           <h2 class="mt-2 text-muted-foreground sm:mt-0">
-            {{ error.statusMessage || 'This page could not be found.' }}
+            {{ error.statusText || 'This page could not be found.' }}
           </h2>
         </div>
       </div>

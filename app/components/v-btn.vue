@@ -1,29 +1,47 @@
 <script setup lang="ts">
+import { NuxtLink } from '#components'
 import type { HTMLAttributes } from 'vue'
 
 const props = withDefaults(
   defineProps<{
+    to?: string
+    href?: string
     variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'
     size?: 'default' | 'sm' | 'lg' | 'icon' | 'icon-sm' | 'icon-lg'
     class?: HTMLAttributes['class']
     radius?: string
+    type?: 'button' | 'submit' | 'reset'
+    disabled?: boolean
   }>(),
   {
     variant: 'default',
     size: 'default',
     radius: 'rounded-md',
+    type: 'button',
   },
 )
+
+const is = computed(() => {
+  if (props.to) return NuxtLink
+  if (props.href) return 'a'
+  return 'button'
+})
 </script>
 
 <template>
-  <button
+  <component
+    :is="is"
     :class="['btn', props.radius, props.class]"
+    :to="props.to"
+    :href="props.href"
+    :type="!props.to && !props.href ? props.type : undefined"
+    :aria-disabled="props.disabled || undefined"
+    :tabindex="props.disabled && (props.to || props.href) ? -1 : undefined"
     :data-variant="props.variant"
     :data-size="props.size"
   >
     <slot />
-  </button>
+  </component>
 </template>
 
 <style scoped>
@@ -78,6 +96,10 @@ const props = withDefaults(
 
   &[data-size='icon-lg'] {
     @apply size-10;
+  }
+
+  :not(&[data-size^='icon']) {
+    @apply active:scale-[.97];
   }
 }
 </style>

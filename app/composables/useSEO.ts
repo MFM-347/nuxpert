@@ -22,19 +22,18 @@ export function useSeo(opts: useSeoOpts) {
     ogType: 'website',
     ogLocale: 'en_US',
     twitterCard: 'summary_large_image',
-    themeColor: '#3f79ff',
+    themeColor: '#1447e6',
   })
 
   useHead({
     htmlAttrs: { lang: 'en' },
-    link: icons
-      ? [
-          icons.favicon ? { rel: 'icon', type: 'image/x-icon', href: icons.favicon } : {},
-          icons.icon ? { rel: 'icon', type: 'image/svg+xml', href: icons.icon } : {},
-          icons.appleTouchIcon
-            ? { rel: 'apple-touch-icons', sizes: '180x180', href: icons.appleTouchIcon }
-            : {},
-        ]
-      : [],
+    link: [
+      { rel: 'canonical', href: meta?.url },
+      ...(icons?.favicon ? [{ rel: 'icon', type: 'image/x-icon', href: icons.favicon }] : []),
+      ...(icons?.icon ? [{ rel: 'icon', type: 'image/svg+xml', href: icons.icon }] : []),
+      ...(icons?.appleTouchIcon
+        ? [{ rel: 'apple-touch-icon', sizes: '180x180', href: icons.appleTouchIcon }]
+        : []),
+    ],
   })
 }

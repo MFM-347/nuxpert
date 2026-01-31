@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const meta = {
-  title: 'Nuxpert – Nuxt 4 Starter Template for Production',
+  title: 'Nuxpert - Nuxt 4 Starter Template for Production',
   description:
     'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
   url: 'https://nuxpert.vercel.app/',
@@ -8,9 +8,9 @@ const meta = {
 useSeo({ meta })
 
 defineOgImageComponent('NuxtSeo', {
-  title: 'Nuxpert – Modern Nuxt 4 Starter',
+  title: 'Nuxpert - Modern Nuxt 4 Starter',
   description: 'A production-ready Nuxt 4 starter for serious developers.',
-  theme: '#3f79ff',
+  theme: '#1447e6',
 })
 
 const included = [
@@ -70,11 +70,7 @@ const included = [
       id="hero"
       class="container flex flex-col items-center justify-center py-36 text-center"
     >
-      <h1
-        class="scroll-m-20 px-2 text-4xl tracking-tighter text-balance max-lg:font-medium max-sm:px-4 sm:text-5xl lg:text-6xl"
-      >
-        Modern Nuxt 4 Starter Template
-      </h1>
+      <h1 class="title">Modern Nuxt 4 Starter Template</h1>
       <p
         class="mt-4 max-w-xl px-2 text-lg/7 leading-7 font-medium text-muted-foreground max-sm:px-4 sm:text-lg"
       >
@@ -91,7 +87,7 @@ const included = [
         >
           <VBtn>
             Use this template
-            <Icon class="size-4" name="carbon-arrow-right" />
+            <Icon class="size-4" name="hugeicons:arrow-right-02" />
           </VBtn>
         </a>
         <a
@@ -103,7 +99,7 @@ const included = [
         >
           <VBtn variant="secondary">
             View GitHub
-            <Icon class="size-4" name="carbon-logo-github" />
+            <Icon class="size-4" name="hugeicons:github" />
           </VBtn>
         </a>
       </div>

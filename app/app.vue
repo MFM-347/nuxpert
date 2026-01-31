@@ -10,7 +10,7 @@ useSeoMeta({ googleSiteVerification: '9C3mmoooLN2NLh5PUEVgr98hTKYWPIarhqp7Efdfwu
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtLoadingIndicator color="#3f79ff" error-color="#ff0d00" />
+    <NuxtLoadingIndicator color="#1447e6" error-color="#ff6467" />
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
