@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "nuxt": {
+      "type": "http",
+      "url": "https://nuxt.com/mcp"
+    },
+    "nuxt-seo": {
+      "type": "http",
+      "url": "https://nuxtseo.com/mcp"
+    }
+  }
+}
