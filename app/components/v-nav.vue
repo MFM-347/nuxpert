@@ -24,7 +24,7 @@ const links = [
 
 <template>
   <nav
-    class="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-foreground/5 px-4 py-1 shadow-md backdrop-blur-md"
+    class="fixed top-0 left-0 z-40 flex w-full items-center justify-between bg-foreground/5 px-4 py-1 shadow-md backdrop-blur-md"
   >
     <NuxtLink class="flex items-center gap-2" to="/">
       <VLogo :size="36" />
