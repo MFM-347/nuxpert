@@ -6,13 +6,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  nitro: {
-    minify: true,
-    prerender: {
-      crawlLinks: true,
-      routes: ['/'],
-    }
-  },
+  nitro: { minify: true },
 
   vite: {
     plugins: [tailwindcss()],
@@ -25,34 +19,13 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/eslint',
-    '@nuxt/a11y',
-    '@nuxtjs/seo',
     '@nuxt/icon',
     '@nuxt/fonts',
+    '@nuxt/a11y',
+    '@nuxtjs/seo',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
   ],
-
-  site: {
-    name: 'Nuxpert',
-    url: 'https://nuxpert.vercel.app/',
-    description:
-      'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
-    tagline: 'Nuxt 4 Starter Template for Production',
-  },
-
-  sitemap: {
-    zeroRuntime: true,
-    defaults: {
-      changefreq: 'weekly',
-      priority: 1,
-      lastmod: new Date().toISOString(),
-    },
-  },
-
-  ogImage: {
-    zeroRuntime: true,
-  },
 
   icon: {
     clientBundle: { scan: true },
@@ -77,6 +50,27 @@ export default defineNuxtConfig({
     ],
   },
 
+  site: {
+    name: 'Nuxpert',
+    url: 'https://nuxpert.vercel.app/',
+    description:
+      'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
+    tagline: 'Nuxt 4 Starter Template',
+  },
+
+  sitemap: {
+    zeroRuntime: true,
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: new Date().toISOString(),
+    },
+  },
+
+  ogImage: {
+    zeroRuntime: true,
+  },
+
   colorMode: {
     preference: 'system',
     fallback: 'dark',
@@ -88,11 +82,15 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    extractAsyncDataHandlers: true,
-    payloadExtraction: true,
+    entryImportMap: false,
+    viteEnvironmentApi: true,
+    viewTransition: true,
+    typedPages: true,
+    buildCache: true,
   },
 
   routeRules: {
+    '/': { prerender: true },
     '/**/*.{css,png,icon,svg,woff,woff2}': {
       cache: {
         swr: true,
