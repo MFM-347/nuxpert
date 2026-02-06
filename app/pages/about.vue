@@ -9,12 +9,12 @@
 
       <div class="relative z-10">
         <span
-          class="font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300 group-hover:text-y1"
+          class="group-hover:text-y1 font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300"
           >v1.1.0</span
         >
 
         <h1
-          class="max-w-lg px-2 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 group-hover:text-y1 max-sm:px-4 md:text-3xl 2xl:mt-0"
+          class="group-hover:text-y1 max-w-lg px-2 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 max-sm:px-4 md:text-3xl 2xl:mt-0"
         >
           Nuxpert
         </h1>
@@ -30,7 +30,7 @@
       </div>
 
       <span
-        class="font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300 group-hover:text-y1"
+        class="group-hover:text-y1 font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300"
       >
         2/1/2026
       </span>
