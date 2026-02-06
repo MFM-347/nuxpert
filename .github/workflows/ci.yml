@@ -71,6 +71,7 @@ jobs:
             git commit -m "chore(format): auto-format files"
             git pull --rebase
             git push
+          fi
 
   lint:
     name: 🔠 Lint & fix
@@ -105,3 +106,4 @@ jobs:
             git commit -m "chore(lint): auto-fix lint issues"
             git pull --rebase
             git push
+          fi
