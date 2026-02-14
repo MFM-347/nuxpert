@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { defineOrganization } from 'nuxt-schema-org/schema'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -25,11 +26,15 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    '@nuxtjs/fontaine',
   ],
 
   icon: {
     clientBundle: { scan: true },
     serverBundle: false,
+    size: '24px',
+    mode: 'css',
+    cssLayer: 'base',
   },
 
   fonts: {
@@ -37,7 +42,6 @@ export default defineNuxtConfig({
     families: [
       {
         name: 'Inter',
-        weights: [400, 500, 600, 700, 800],
         fallbacks: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
         global: true,
       },
@@ -56,6 +60,17 @@ export default defineNuxtConfig({
     description:
       'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
     tagline: 'Nuxt 4 Starter Template',
+  },
+
+  schemaOrg: {
+    identity: defineOrganization({
+      name: 'Nuxpert',
+      logo: '/icon.svg',
+      description:
+        'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
+      url: 'https://nuxpert.vercel.app/',
+    }),
+    minify: true,
   },
 
   sitemap: {
@@ -91,6 +106,9 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/': { prerender: true },
+    '/github': {
+      redirect: 'https://github.com/MFM-347/nuxpert',
+    },
     '/**/*.{css,png,icon,svg,woff,woff2}': {
       cache: {
         swr: true,
