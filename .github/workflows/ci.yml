@@ -92,7 +92,7 @@ jobs:
         run: pnpm install
 
       - name: 🔠 Lint and fix errors
-        run: pnpm lint:fix
+        run: pnpm lint
 
       - name: Commit and Push lint fixes
         if: github.ref == 'refs/heads/main'
