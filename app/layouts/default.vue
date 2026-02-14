@@ -10,5 +10,6 @@
     <main id="content" class="flex-1" tabindex="-1">
       <slot />
     </main>
+    <VFooter />
   </div>
 </template>

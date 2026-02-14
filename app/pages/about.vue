@@ -1,46 +1,46 @@
 <template>
-  <div class="container grid place-items-center py-12">
-    <article
-      class="group relative flex cursor-pointer flex-col justify-between overflow-hidden border border-border/60 p-5 transition-all duration-500 group-hover:border-primary/60"
-    >
-      <div
-        class="absolute inset-0 bg-primary/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-      />
+  <div class="container mt-20 max-w-3xl">
+    <div class="text-center">
+      <h1 class="animate-in title duration-200 fade-in">About Nuxpert</h1>
+      <p class="mt-4 animate-in text-lg text-foreground/80 duration-200 fade-in">
+        Nuxpert is a high-performance Nuxt 4 starter template designed to supercharge your
+        development workflow. It comes pre-configured with a modern tech stack to help you build
+        fast, accessible, and SEO-friendly web applications.
+      </p>
+    </div>
 
-      <div class="relative z-10">
-        <span
-          class="group-hover:text-y1 font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300"
-          >v1.1.0</span
-        >
+    <div class="mt-12">
+      <h2 class="animate-in text-2xl font-semibold duration-200 fade-in">Our Philosophy</h2>
+      <p class="mt-4 animate-in text-foreground/90 duration-200 fade-in">
+        We believe that developers shouldn't have to waste hours on repetitive setup and
+        configuration. Nuxpert provides a solid, opinionated foundation so you can skip the
+        boilerplate and start building your actual product features from day one. Our focus is on
+        providing strong defaults for performance, accessibility, and developer experience without
+        locking you into a heavy, inflexible framework.
+      </p>
 
-        <h1
-          class="group-hover:text-y1 max-w-lg px-2 text-2xl font-medium tracking-tight text-balance text-foreground transition-colors duration-300 max-sm:px-4 md:text-3xl 2xl:mt-0"
-        >
-          Nuxpert
-        </h1>
-      </div>
-
-      <div class="relative z-10">
-        <p
-          class="max-w-[270px] translate-y-2 font-mono text-xs leading-relaxed text-muted-foreground opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
-        >
-          Nuxpert is a sleek, high-performance Nuxt 4 template with TypeScript, Tailwind CSS,
-          accessibility, and SEO optimization built in.
+      <h2 class="mt-12 animate-in text-2xl font-semibold duration-200 fade-in">
+        License Information
+      </h2>
+      <div class="mt-4 animate-in rounded-lg border bg-accent/20 p-6 duration-200 fade-in">
+        <p class="font-semibold">MIT License</p>
+        <p class="mt-2 text-muted-foreground">Copyright (c) 2025 Farhan Madni</p>
+        <p class="mt-4 text-sm text-muted-foreground">
+          The Nuxpert template is released under the MIT License. This means you are free to use,
+          copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
+          For the full license text, please refer to the LICENSE file in the repository.
         </p>
+        <VBtn
+          class="mt-6"
+          variant="outline"
+          href="https://github.com/mfm-347/nuxpert/blob/main/LICENSE"
+          target="_blank"
+          rel="noopener"
+        >
+          View License on GitHub
+          <Icon class="size-5" name="hugeicons:arrow-right-02" />
+        </VBtn>
       </div>
-
-      <span
-        class="group-hover:text-y1 font-mono text-[12px] tracking-widest text-muted-foreground/90 transition-colors duration-300"
-      >
-        2/1/2026
-      </span>
-
-      <div
-        class="absolute top-0 right-0 h-12 w-12 opacity-0 transition-all duration-500 group-hover:opacity-100"
-      >
-        <div class="absolute top-0 right-0 h-[1px] w-full bg-primary" />
-        <div class="absolute top-0 right-0 h-full w-[1px] bg-primary" />
-      </div>
-    </article>
+    </div>
   </div>
 </template>
