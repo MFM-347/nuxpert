@@ -143,7 +143,7 @@ watch(copied, (isCopied) => {
             <img
               src="https://img.shields.io/github/stars/mfm-347/nuxpert?style=social"
               alt="GitHub stars"
-            />
+            >
           </a>
         </div>
       </div>
