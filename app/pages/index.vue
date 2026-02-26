@@ -99,46 +99,51 @@ watch(copied, (isCopied) => {
     >
       <div class="mx-auto max-w-4xl space-y-4 text-center md:space-y-6">
         <h1
-          class="bg-linear-to-br from-foreground to-foreground/40 bg-clip-text title text-center text-transparent"
+          class="mb-8 bg-linear-to-b from-foreground via-foreground to-foreground/60 bg-clip-text title leading-[1.05] text-transparent"
         >
           Supercharge your Nuxt workflow
         </h1>
-        <p class="text-lg text-muted-foreground sm:text-xl">
+        <p
+          class="mx-auto mb-12 max-w-2xl text-lg/relaxed font-medium text-muted-foreground md:text-xl"
+        >
           A refined Nuxt 4 template with TypeScript, Tailwind CSS, accessibility, and SEO baked in.
           Built for developers who value speed and best practices.
         </p>
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+        <div class="flex flex-col items-center justify-center gap-5 sm:flex-row">
           <VButton
-            class="animate-in transition-all duration-700 fade-in-20 hover:-translate-y-1 hover:drop-shadow-btn"
+            class="text-lg transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn"
+            size="lg"
             href="https://github.com/mfm-347/nuxpert/generate"
             target="_blank"
             rel="noopener"
             aria-label="Use the Nuxpert Nuxt 4 starter template"
           >
             Use this template
-            <Icon class="size-4" name="hugeicons:arrow-right-02" />
+            <Icon class="ml-2.5 size-6" name="hugeicons:arrow-right-02" />
           </VButton>
           <VButton
-            class="transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn"
+            class="text-lg transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn"
             variant="secondary"
-            href="https://nuxpert.vercel.app/"
+            size="lg"
+            href="/"
             target="_blank"
             rel="noopener"
             aria-label="View live demo of Nuxpert"
           >
             View Demo
-            <Icon class="size-4" name="carbon:launch" />
+            <Icon class="ml-2.5 size-6" name="hugeicons:share-05" />
           </VButton>
           <VButton
-            class="transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn2"
+            class="text-lg transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn2"
             variant="outline"
+            size="lg"
             href="https://github.com/mfm-347/nuxpert"
             target="_blank"
             rel="noopener"
             aria-label="View Nuxpert on GitHub"
           >
             View GitHub
-            <Icon class="size-4" name="hugeicons:github" />
+            <Icon class="ml-2.5 size-6" name="hugeicons:github" />
           </VButton>
           <a href="https://github.com/mfm-347/nuxpert/stargazers" target="_blank" rel="noopener">
             <img
@@ -168,7 +173,7 @@ watch(copied, (isCopied) => {
           <div
             v-for="(val, i) in includedFeatures"
             :key="i"
-            class="transform rounded-xl border border-border bg-card/36 p-4 text-foreground shadow-sm backdrop-blur-lg transition-all duration-200"
+            class="transform rounded-xl border border-border bg-card/36 p-6 text-foreground shadow-sm backdrop-blur-lg transition-all duration-200"
           >
             <span class="mb-6 grid size-10 place-items-center rounded-sm bg-primary">
               <Icon class="size-6 text-primary-foreground" :name="val.icon" />
@@ -304,11 +309,11 @@ section .container {
 }
 
 h2 {
-  @apply mx-auto mb-8 max-w-lg scroll-m-20 px-2 pb-2 text-center text-[2.5rem]/10 font-medium tracking-tighter text-balance first:mt-0 max-sm:px-4 2xl:mt-0;
+  @apply mx-auto mb-6 max-w-lg scroll-m-20 px-2 pb-2 text-center text-4xl font-medium tracking-tight text-balance first:mt-0 max-sm:px-4 md:text-5xl 2xl:mt-0;
 }
 
 h3 {
-  @apply mb-4 scroll-m-20 text-base/6 font-semibold tracking-tight;
+  @apply mb-4 scroll-m-20 text-xl font-semibold tracking-tight md:text-2xl;
 }
 
 ul {
