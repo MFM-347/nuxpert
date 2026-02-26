@@ -11,6 +11,7 @@ export default {
   plugins: [
     'prettier-plugin-organize-attributes',
     'prettier-plugin-css-order',
+    'prettier-plugin-organize-imports',
     'prettier-plugin-tailwindcss',
   ],
   attributeGroups: [
