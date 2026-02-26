@@ -1,9 +1,34 @@
 # Nuxpert - Modern Nuxt 4 Template
 
-Nuxpert is a sleek, high-performance Nuxt 4 template with TypeScript, Tailwind CSS, accessibility, and SEO optimization built in.
+<p align="center">
+  <a href="https://nuxpert.vercel.app">
+    <img src="public/icon.svg" alt="Nuxpert Logo" width="100" />
+  </a>
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/MFM-347/nuxpert?style=social)](https://github.com/MFM-347/nuxpert/stargazers)
+<h1 align="center">Nuxpert</h1>
+
+<p align="center">
+  Sleek, high-performance Nuxt 4 template with TypeScript, Tailwind CSS, accessibility, and SEO optimization built in.
+  <br />
+  <a href="https://nuxpert.vercel.app"><strong>View Demo</strong></a>
+  ·
+  <a href="https://github.com/MFM-347/nuxpert/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/MFM-347/nuxpert/issues">Request Feature</a>
+</p>
+
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/github/license/MFM-347/nuxpert?style=for-the-badge" alt="License" />
+  </a>
+  <a href="https://github.com/MFM-347/nuxpert/stargazers">
+    <img src="https://img.shields.io/github/stars/MFM-347/nuxpert?style=for-the-badge" alt="Stars" />
+  </a>
+  <a href="https://github.com/MFM-347/nuxpert/network/members">
+    <img src="https://img.shields.io/github/forks/MFM-347/nuxpert?style=for-the-badge" alt="Forks" />
+  </a>
+</p>
 
 ## ✨ Features
 
@@ -37,7 +62,7 @@ Nuxpert is a sleek, high-performance Nuxt 4 template with TypeScript, Tailwind C
    pnpm dev
    ```
 
-##  अवेलेबल Scripts
+## Scripts
 
 - `dev`: Start the development server.
 - `build`: Build the application for production.
@@ -51,7 +76,7 @@ Nuxpert is a sleek, high-performance Nuxt 4 template with TypeScript, Tailwind C
 
 We love community input!
 
-- Check [CONTRIBUTING.md](https://github.com/MFM-347/nuxpert/blob/main/CONTRIBUTING.md)
+- Check [CONTRIBUTING.md](./CONTRIBUTING.md)
 - Look for issues labeled **good first issue**
 - Open a Pull Request with your improvement or idea.
 
@@ -64,3 +89,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🧑‍💻 Credits
 
 Created with ❤️ by [@MFM-347](https://github.com/MFM-347)
+
+## 👨‍💻 Contributors
+
+<a href="https://github.com/MFM-347/nuxpert/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=MFM-347/nuxpert" />
+</a>
