@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
 useSeo({
   meta: {
@@ -7,7 +8,7 @@ useSeo({
     url: 'https://nuxpert.vercel.app/',
   },
 })
-defineOgImageComponent('NuxtSeo')
+defineOgImageComponent('nuxt-seo')
 
 const includedFeatures = [
   {
@@ -94,7 +95,7 @@ watch(copied, (isCopied) => {
   <div class="flex flex-col gap-4">
     <section
       id="hero"
-      class="animate-fade-in-down animate-duration-1000 relative flex min-h-[calc(100vh-1rem)] items-center justify-center bg-linear-to-b from-primary/60 to-background"
+      class="relative flex min-h-[calc(100vh-1rem)] animate-in items-center justify-center bg-linear-to-b from-primary/60 to-background duration-1000 fade-in"
     >
       <div class="mx-auto max-w-4xl space-y-4 text-center md:space-y-6">
         <h1
@@ -106,9 +107,9 @@ watch(copied, (isCopied) => {
           A refined Nuxt 4 template with TypeScript, Tailwind CSS, accessibility, and SEO baked in.
           Built for developers who value speed and best practices.
         </p>
-        <div class="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-4">
-          <VBtn
-            class="animate-duration-1000 animate-in transition-all duration-160 fade-in-20 hover:-translate-y-1 hover:drop-shadow-btn"
+        <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <VButton
+            class="animate-in transition-all duration-700 fade-in-20 hover:-translate-y-1 hover:drop-shadow-btn"
             href="https://github.com/mfm-347/nuxpert/generate"
             target="_blank"
             rel="noopener"
@@ -116,8 +117,8 @@ watch(copied, (isCopied) => {
           >
             Use this template
             <Icon class="size-4" name="hugeicons:arrow-right-02" />
-          </VBtn>
-          <VBtn
+          </VButton>
+          <VButton
             class="transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn"
             variant="secondary"
             href="https://nuxpert.vercel.app/"
@@ -127,8 +128,8 @@ watch(copied, (isCopied) => {
           >
             View Demo
             <Icon class="size-4" name="carbon:launch" />
-          </VBtn>
-          <VBtn
+          </VButton>
+          <VButton
             class="transition-all duration-160 hover:-translate-y-1 hover:drop-shadow-btn2"
             variant="outline"
             href="https://github.com/mfm-347/nuxpert"
@@ -138,12 +139,12 @@ watch(copied, (isCopied) => {
           >
             View GitHub
             <Icon class="size-4" name="hugeicons:github" />
-          </VBtn>
+          </VButton>
           <a href="https://github.com/mfm-347/nuxpert/stargazers" target="_blank" rel="noopener">
             <img
               src="https://img.shields.io/github/stars/mfm-347/nuxpert?style=social"
               alt="GitHub stars"
-            />
+            >
           </a>
         </div>
       </div>
@@ -191,7 +192,7 @@ watch(copied, (isCopied) => {
 
     <section id="who-is-nuxpert-for">
       <div class="container">
-        <h2 class="animate-fade-in-down animate-duration-1000 mx-auto">Who Nuxpert Is For</h2>
+        <h2 class="mx-auto animate-in duration-1000 fade-in">Who Nuxpert Is For</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
           <div
             class="rounded-lg bg-accent/10 p-6 transition-all duration-160 hover:-translate-y-0.5"
@@ -241,13 +242,13 @@ watch(copied, (isCopied) => {
 
     <section id="getting-started">
       <div class="container">
-        <h2 class="animate-fade-in-down animate-duration-1000 mx-auto">Getting Started</h2>
+        <h2 class="mx-auto animate-in duration-1000 fade-in">Getting Started</h2>
         <p class="mb-4 text-center text-muted-foreground">Start a new project in minutes:</p>
         <div class="relative mx-auto max-w-2xl">
           <pre
             class="mb-6 overflow-x-auto rounded-lg bg-secondary p-6 pr-24 text-left text-secondary-foreground"
           ><code>{{ codeSnippet }}</code></pre>
-          <VBtn
+          <VButton
             class="absolute top-3 right-3 transition-all active:scale-95"
             size="sm"
             variant="outline"
@@ -255,7 +256,7 @@ watch(copied, (isCopied) => {
             @click="copy"
           >
             <Icon :name="copyButtonIcon" /> {{ copyButtonText }}
-          </VBtn>
+          </VButton>
         </div>
         <p class="mb-6 text-center text-muted-foreground">
           That’s it. No extra configuration required.
@@ -270,21 +271,21 @@ watch(copied, (isCopied) => {
           Nuxpert gives you a clean, production-ready foundation…
         </p>
         <div class="mt-6 flex flex-wrap items-center justify-center gap-x-4">
-          <VBtn
+          <VButton
             class="transition-all duration-160 hover:scale-105"
             href="https://github.com/mfm-347/nuxpert/generate"
             target="_blank"
             rel="noopener"
           >
             Use this template
-          </VBtn>
-          <VBtn
+          </VButton>
+          <VButton
             class="transition-all duration-160 hover:scale-105"
             variant="secondary"
             href="https://github.com/mfm-347/nuxpert"
           >
             View GitHub
-          </VBtn>
+          </VButton>
         </div>
       </div>
     </section>

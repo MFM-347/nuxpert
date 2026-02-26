@@ -30,7 +30,7 @@
           copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
           For the full license text, please refer to the LICENSE file in the repository.
         </p>
-        <VBtn
+        <VButton
           class="mt-6"
           variant="outline"
           href="https://github.com/mfm-347/nuxpert/blob/main/LICENSE"
@@ -39,7 +39,7 @@
         >
           View License on GitHub
           <Icon class="size-5" name="hugeicons:arrow-right-02" />
-        </VBtn>
+        </VButton>
       </div>
     </div>
   </div>

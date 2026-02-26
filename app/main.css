@@ -21,6 +21,10 @@
   @apply px-2 text-center text-4xl tracking-tighter text-balance max-lg:font-bold max-sm:px-4 sm:text-5xl lg:text-6xl;
 }
 
+@utility btn {
+  @apply text-sm;
+}
+
 @utility font-sans {
   font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }

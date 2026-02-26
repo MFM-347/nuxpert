@@ -1,7 +1,23 @@
-import type { useSeoOpts } from '@/types/seo'
+interface Meta {
+  title?: string
+  description?: string
+  url?: string
+  author?: string
+}
 
-export function useSeo(opts: useSeoOpts) {
-  const { meta, icons } = opts
+interface Icons {
+  favicon?: string
+  icon?: string
+  appleTouchIcon?: string
+}
+
+interface useSeoOptions {
+  meta?: Meta
+  icons?: Icons
+}
+
+export function useSeo(options: useSeoOptions) {
+  const { meta, icons } = options
 
   const m = meta && {
     title: meta.title,

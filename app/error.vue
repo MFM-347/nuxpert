@@ -1,22 +1,26 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
 
-const props = defineProps<{
+const properties = defineProps<{
   error: NuxtError
 }>()
 
-const status = computed(() => props.error.status || 500)
+const status = computed(() => properties.error.status || 500)
 const statusText = computed(() => {
-  if (props.error.statusText) return props.error.statusText
+  if (properties.error.statusText) return properties.error.statusText
   switch (status.value) {
-    case 404:
+    case 404: {
       return 'Page not found'
-    case 500:
+    }
+    case 500: {
       return 'Internal server error'
-    case 503:
+    }
+    case 503: {
       return 'Service unavailable'
-    default:
+    }
+    default: {
       return 'Something went wrong'
+    }
   }
 })
 
@@ -26,7 +30,7 @@ useHead({
 </script>
 
 <template>
-  <div class="dark flex min-h-dvh flex-col bg-background">
+  <div class="flex min-h-dvh flex-col bg-background">
     <div class="text-foreground lg:mx-10 lg:border-x">
       <div class="flex h-[calc(100vh-4.01rem)] items-center justify-center border-x">
         <div

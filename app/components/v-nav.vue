@@ -32,7 +32,7 @@ const links = [
     </NuxtLink>
 
     <div class="inline-flex flex-row gap-x-1 p-1">
-      <VBtn
+      <VButton
         v-for="lnk in links"
         :key="lnk.label"
         :title="lnk.label"
@@ -42,8 +42,8 @@ const links = [
         variant="ghost"
       >
         <Icon class="text-[20px]" :name="lnk.icon" />
-      </VBtn>
-      <VBtn
+      </VButton>
+      <VButton
         size="icon"
         variant="ghost"
         title="Toggle Theme"
@@ -60,7 +60,7 @@ const links = [
           aria-hidden="true"
           name="hugeicons:sun-02"
         />
-      </VBtn>
+      </VButton>
     </div>
   </nav>
 </template>
