@@ -39,19 +39,13 @@ export default defineNuxtConfig({
 
   fonts: {
     priority: ['google'],
-    families: [
-      {
-        name: 'Inter',
-        fallbacks: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
-        global: true,
+    defaults: {
+      preload: true, subsets: ['latin'],
+      fallbacks: {
+        "sans-serif": ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
+        monospace: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
       },
-      {
-        name: 'IBM Plex Mono',
-        fallbacks: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
-        weights: [400, 500],
-        global: true,
-      },
-    ],
+    },
   },
 
   site: {
