@@ -5,7 +5,7 @@
 
 import { computed } from 'vue'
 
-const props = withDefaults(
+const properties = withDefaults(
   defineProps<{
     colorMode?: 'dark' | 'light'
     title?: string
@@ -15,15 +15,16 @@ const props = withDefaults(
   {
     colorMode: 'light',
     title: 'title',
+    description: 'description',
   },
 )
 
-const themeColor = computed(() => (props.isPro ? '124, 58, 237' : '34, 197, 94'))
+const themeColor = computed(() => (properties.isPro ? '124, 58, 237' : '34, 197, 94'))
 </script>
 
 <template>
   <div
-    class="relative flex h-full w-full flex-col items-center justify-center p-[60px]"
+    class="relative flex size-full flex-col items-center justify-center p-[60px]"
     :style="{
       backgroundColor: colorMode === 'dark' ? '#171717' : '#ffffff',
       color: colorMode === 'dark' ? '#fafafa' : '#171717',
@@ -31,13 +32,13 @@ const themeColor = computed(() => (props.isPro ? '124, 58, 237' : '34, 197, 94')
   >
     <!-- Gradient background -->
     <div
-      class="absolute top-0 right-0 bottom-0 left-0"
+      class="absolute inset-0"
       :style="{
         backgroundImage: `radial-gradient(ellipse 100% 100% at 100% 100%, rgba(${themeColor}, 0.15) 0%, transparent 60%)`,
       }"
     />
     <div
-      class="absolute top-0 right-0 bottom-0 left-0"
+      class="absolute inset-0"
       :style="{
         backgroundImage: `radial-gradient(ellipse 100% 100% at 0.1% 0.1%, rgba(${themeColor}, 0.1) 0%, transparent 50%)`,
       }"
@@ -46,7 +47,7 @@ const themeColor = computed(() => (props.isPro ? '124, 58, 237' : '34, 197, 94')
     <div class="relative flex flex-col items-center gap-8 text-center">
       <!-- Logo -->
       <div class="flex items-center gap-3">
-        <svg class="h-16 w-16" viewBox="0 0 64 64">
+        <svg class="size-16" viewBox="0 0 64 64">
           <defs>
             <linearGradient :id="isPro ? 'nsLine2' : 'nsLine1'" x1="0%" y1="100%" x2="100%" y2="0%">
               <stop offset="0%" :stop-color="isPro ? '#7c3aed' : '#22c55e'" />

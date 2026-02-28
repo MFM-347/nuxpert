@@ -1,3 +1,15 @@
+<script setup lang="ts">
+useSeo({
+    title: 'About',
+    description:
+      'Nuxpert is a production-ready Nuxt 4 starter template designed to help developers launch web applications quickly and efficiently. It comes with TypeScript for scalable code, Tailwind CSS for rapid styling, accessibility best practices, and SEO optimizations out of the box. With Nuxpert, you can skip repetitive setup and focus on building high-quality, modern web apps from day one.',
+    shortDescription:
+      'Nuxt 4 starter template with TypeScript, Tailwind CSS, accessibility & SEO—ready for production.',
+    url: 'https://nuxpert.vercel.app/about',
+})
+defineOgImageComponent('nuxt-seo')
+</script>
+
 <template>
   <div class="container mt-20 max-w-3xl">
     <div class="text-center">
@@ -30,7 +42,7 @@
           copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software.
           For the full license text, please refer to the LICENSE file in the repository.
         </p>
-        <VBtn
+        <VButton
           class="mt-6"
           variant="outline"
           href="https://github.com/mfm-347/nuxpert/blob/main/LICENSE"
@@ -39,7 +51,7 @@
         >
           View License on GitHub
           <Icon class="size-5" name="hugeicons:arrow-right-02" />
-        </VBtn>
+        </VButton>
       </div>
     </div>
   </div>

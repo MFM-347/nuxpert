@@ -24,13 +24,13 @@ cd Nuxpert
 Install the required dependencies:
 
 ```bash
-npm install
+pnpm install
 ```
 
 Ensure everything is working by running the project locally:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 ### Step 4: Create a Branch
@@ -60,13 +60,13 @@ Examples:
 After making your changes, rebuild the project to generate updated files:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ### Step 7: Test Your Changes
 
 - Thoroughly test your changes to ensure they work as expected.
-- Use the local development server (`npm run dev`) to verify functionality.
+- Use the local development server (`pnpm run dev`) to verify functionality.
 - If applicable, run automated tests to confirm your changes don’t break existing functionality.
 
 ### Step 8: Commit Your Work

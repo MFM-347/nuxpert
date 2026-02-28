@@ -2,7 +2,7 @@
 import { NuxtLink } from '#components'
 import type { HTMLAttributes } from 'vue'
 
-const props = withDefaults(
+const properties = withDefaults(
   defineProps<{
     to?: string
     href?: string
@@ -22,8 +22,8 @@ const props = withDefaults(
 )
 
 const is = computed(() => {
-  if (props.to) return NuxtLink
-  if (props.href) return 'a'
+  if (properties.to) return NuxtLink
+  if (properties.href) return 'a'
   return 'button'
 })
 </script>
@@ -31,14 +31,14 @@ const is = computed(() => {
 <template>
   <component
     :is="is"
-    :class="['btn', props.radius, props.class]"
-    :to="props.to"
-    :href="props.href"
-    :type="!props.to && !props.href ? props.type : undefined"
-    :aria-disabled="props.disabled || undefined"
-    :tabindex="props.disabled && (props.to || props.href) ? -1 : undefined"
-    :data-variant="props.variant"
-    :data-size="props.size"
+    :class="['btn', properties.radius, properties.class]"
+    :to="properties.to"
+    :href="properties.href"
+    :type="!properties.to && !properties.href ? properties.type : undefined"
+    :aria-disabled="properties.disabled || undefined"
+    :tabindex="properties.disabled && (properties.to || properties.href) ? -1 : undefined"
+    :data-variant="properties.variant"
+    :data-size="properties.size"
   >
     <slot />
   </component>
