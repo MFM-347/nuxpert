@@ -80,7 +80,7 @@ defineOgImageComponent('nuxt-seo')
       <div class="container">
         <h2>Features</h2>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <VFeatureCard v-for="(val, i) in features" :feature="val" :key="i" />
+          <VFeatureCard v-for="(val, i) in features" :key="i" :feature="val" />
         </div>
         <p class="mt-6 text-center text-base text-foreground/80 italic">
           Everything is configured for production, but stays easy to extend or remove.

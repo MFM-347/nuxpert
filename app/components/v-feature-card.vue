@@ -11,7 +11,7 @@ defineProps<{
     <!-- Decorative blurred circle -->
     <div
       class="absolute -top-12 -right-12 size-32 rounded-full bg-primary/5 blur-3xl transition-colors group-hover:bg-primary/40"
-    ></div>
+    />
 
     <!-- Icon container -->
     <div
