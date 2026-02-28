@@ -17,7 +17,7 @@ const properties = withDefaults(
     variant: 'default',
     size: 'default',
     radius: 'rounded-md',
-    type: 'button'
+    type: 'button',
   },
 )
 

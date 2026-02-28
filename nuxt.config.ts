@@ -40,9 +40,10 @@ export default defineNuxtConfig({
   fonts: {
     priority: ['google'],
     defaults: {
-      preload: true, subsets: ['latin'],
+      preload: true,
+      subsets: ['latin'],
       fallbacks: {
-        "sans-serif": ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
+        'sans-serif': ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial'],
         monospace: ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'Menlo', 'Consolas'],
       },
     },
@@ -103,7 +104,7 @@ export default defineNuxtConfig({
     '/github': {
       redirect: 'https://github.com/MFM-347/nuxpert',
     },
-    '/**/*.{css,png,icon,svg,woff,woff2}': {
+    '/**/*.{css,png,svg,woff2}': {
       cache: {
         swr: true,
         maxAge: 60 * 60 * 24 * 3, // 3 days

@@ -1,11 +1,11 @@
 // @ts-check
-import withNuxt from './.nuxt/eslint.config.mjs'
-import oxlint from "eslint-plugin-oxlint"
 import eslintPluginBetterTailwindcss from 'eslint-plugin-better-tailwindcss'
+import oxlint from 'eslint-plugin-oxlint'
 import eslintPluginUnicorn from 'eslint-plugin-unicorn'
+import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  ...oxlint.configs["flat/recommended"],
+  ...oxlint.configs['flat/recommended'],
   eslintPluginUnicorn.configs.recommended,
   eslintPluginBetterTailwindcss.configs.recommended,
   {
@@ -19,5 +19,5 @@ export default withNuxt(
       'unicorn/no-abusive-eslint-disable': 'warn',
       'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
     },
-  }
+  },
 )
