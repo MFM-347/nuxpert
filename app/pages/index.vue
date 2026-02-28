@@ -101,7 +101,7 @@ defineOgImageComponent('nuxt-seo')
         <div class="relative z-10 space-y-8">
           <h2 class="leading-[1.1]">Ready to build with Nuxt 4?</h2>
           <p class="mx-auto mb-10 max-w-xl text-xl/relaxed font-medium text-muted-foreground/80">
-            Nuxpert gives you a clean, production-ready foundation...
+            Start with a clean, production-ready Nuxt 4 foundation and focus on building.
           </p>
           <VButton
             size="lg"
