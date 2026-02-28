@@ -1,12 +1,10 @@
 <!-- eslint-disable vue/no-v-html -->
 <script setup lang="ts">
 useSeo({
-  meta: {
     title: 'Nuxpert - Supercharge Your Nuxt Workflow',
     description:
       'Production-ready Nuxt 4 starter with TypeScript, Tailwind CSS, accessibility, and SEO built in.',
     url: 'https://nuxpert.vercel.app/',
-  },
 })
 defineOgImageComponent('nuxt-seo')
 
