@@ -1,12 +1,12 @@
 <!-- eslint-disable unicorn/prevent-abbreviations -->
 <script setup lang="ts">
 useSeo({
-    title: 'Docs',
-    description:
-      'Complete documentation for Nuxpert: Nuxt 4 starter template with TypeScript, Tailwind, SEO, accessibility, and developer tooling.',
-    shortDescription:
-      'Documentation and guide for Nuxpert: Nuxt 4 starter template for modern web apps.',
-    url: 'https://nuxpert.vercel.app/docs',
+  title: 'Docs',
+  description:
+    'Complete documentation for Nuxpert: Nuxt 4 starter template with TypeScript, Tailwind, SEO, accessibility, and developer tooling.',
+  shortDescription:
+    'Documentation and guide for Nuxpert: Nuxt 4 starter template for modern web apps.',
+  url: 'https://nuxpert.vercel.app/docs',
 })
 
 const docsSections = [

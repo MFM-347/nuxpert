@@ -3,12 +3,12 @@
 import { features } from '@/content/features'
 
 useSeo({
-    title: 'Nuxpert - Supercharge Your Nuxt Workflow',
-    description:
-      'A production-ready Nuxt 4 starter template with TypeScript, Tailwind CSS, accessibility, and SEO built in. Designed for developers who want a modern, maintainable, and performant web app from the get-go, this starter includes best practices for development, styling, and search engine optimization. Launch your Nuxt 4 project quickly without sacrificing quality or standards.',
-    shortDescription:
-      'Nuxt 4 starter with TypeScript, Tailwind CSS, SEO & accessibility—ready for production.',
-    url: 'https://nuxpert.vercel.app/',
+  title: 'Nuxpert - Supercharge Your Nuxt Workflow',
+  description:
+    'A production-ready Nuxt 4 starter template with TypeScript, Tailwind CSS, accessibility, and SEO built in. Designed for developers who want a modern, maintainable, and performant web app from the get-go, this starter includes best practices for development, styling, and search engine optimization. Launch your Nuxt 4 project quickly without sacrificing quality or standards.',
+  shortDescription:
+    'Nuxt 4 starter with TypeScript, Tailwind CSS, SEO & accessibility—ready for production.',
+  url: 'https://nuxpert.vercel.app/',
 })
 useSeoMeta({ titleTemplate: '' })
 defineOgImageComponent('nuxt-seo')
