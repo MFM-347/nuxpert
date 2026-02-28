@@ -2,7 +2,7 @@
 const clr = '#00c951'
 
 useSeoMeta({
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  viewport: 'width=device-width, initial-scale=1',
   author: 'art70x',
   creator: 'art70x',
   robots: 'index, follow',
