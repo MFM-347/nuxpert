@@ -1,27 +1,23 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from 'vue'
 
-const properties = withDefaults(
-  defineProps<{
-    class?: HTMLAttributes['class']
-    size?: string | number
-  }>(),
-  { size: 24 },
-)
+const properties = defineProps<{
+  class?: HTMLAttributes['class']
+}>()
 </script>
 
 <template>
-  <svg
-    :class="properties.class"
-    :height="properties.size"
-    :width="properties.size"
-    viewBox="0 0 782.3 782.3"
+  <div
+    :class="[
+      'flex size-10 items-center justify-center rounded-lg shadow-lg shadow-primary/30 transition-transform duration-300 primary-gradient group-hover:scale-105',
+      properties.class,
+    ]"
   >
-    <rect class="fill-background" width="782.3" height="782.3" rx="72" ry="72" />
-    <path
-      d="M429.8,597.6H665a44.19,44.19,0,0,0,21.3-5.5A42.54,42.54,0,0,0,701.9,577a40.26,40.26,0,0,0,0-41.3l-158-265.5a42.54,42.54,0,0,0-15.6-15.1,43.65,43.65,0,0,0-42.6,0,42.54,42.54,0,0,0-15.6,15.1l-40.4,67.9-79-132.8a42.54,42.54,0,0,0-15.6-15.1,43.65,43.65,0,0,0-42.6,0,42.54,42.54,0,0,0-15.6,15.1L80.4,535.7a40.26,40.26,0,0,0,0,41.3A41.78,41.78,0,0,0,96,592.1a44,44,0,0,0,21.3,5.5H265c58.5,0,101.7-24.9,131.4-73.6l72-121L507,338.2,622.9,532.9H468.4ZM266.9,532.8H159.8L314.1,273.6l77,129.6-51.5,86.6c-19.7,31.5-42.1,43-76.8,43"
-      fill="#00dc82"
-      style="filter: drop-shadow(0 0 12px #00dc82)"
-    />
-  </svg>
+    <svg viewBox="0 0 24 24" class="size-5 text-foreground" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill="currentColor"
+        d="M13.464 19.83h8.922c.283 0 .562-.073.807-.21a1.6 1.6 0 0 0 .591-.574a1.53 1.53 0 0 0 .216-.783a1.53 1.53 0 0 0-.217-.782L17.792 7.414a1.6 1.6 0 0 0-.591-.573a1.65 1.65 0 0 0-.807-.21c-.283 0-.562.073-.807.21a1.6 1.6 0 0 0-.59.573L13.463 9.99L10.47 4.953a1.6 1.6 0 0 0-.591-.573a1.65 1.65 0 0 0-.807-.21c-.284 0-.562.073-.807.21a1.6 1.6 0 0 0-.591.573L0.216 17.481a1.53 1.53 0 0 0-.217.782c0 .275.074.545.216.783a1.6 1.6 0 0 0 .59.574c.246.137.525.21.808.21h5.6c2.22 0 3.856-.946 4.982-2.79l2.733-4.593l1.464-2.457l4.395 7.382h-5.859Zm-6.341-2.46l-3.908-.002l5.858-9.842l2.923 4.921l-1.957 3.29c-.748 1.196-1.597 1.632-2.916 1.632"
+      />
+    </svg>
+  </div>
 </template>
