@@ -10,8 +10,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "type-check": "vue-tsc -b --noEmit",
-    "lint": "oxlint . && eslint .",
-    "lint:fix": "oxlint . --fix && eslint . --fix",
+    "lint": "oxlint && eslint",
+    "lint:fix": "oxlint --fix && eslint --fix",
     "format": "prettier --write --experimental-cli app/",
     "predev": "nr lint && nr format && cls"
   },
@@ -49,11 +49,6 @@
     "tw-animate-css": "^1.4.0",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "^8.0.0-beta.15"
-    }
   },
   "packageManager": "pnpm@10.30.0"
 }
