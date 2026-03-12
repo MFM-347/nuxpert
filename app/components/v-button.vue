@@ -1,17 +1,28 @@
 <script setup lang="ts">
-import { NuxtLink } from '#components'
 import type { HTMLAttributes } from 'vue'
+
+type Radius =
+  | 'rounded-none'
+  | 'rounded-xs'
+  | 'rounded-sm'
+  | 'rounded-md'
+  | 'rounded-lg'
+  | 'rounded-xl'
+  | 'rounded-full'
+type Variant = 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'
+type Size = 'default' | 'sm' | 'lg' | 'icon' | 'icon-sm' | 'icon-lg'
 
 const properties = withDefaults(
   defineProps<{
     to?: string
     href?: string
-    variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost' | 'link'
-    size?: 'default' | 'sm' | 'lg' | 'icon' | 'icon-sm' | 'icon-lg'
+    variant?: Variant
+    size?: Size
     class?: HTMLAttributes['class']
-    radius?: string
+    radius?: Radius
     type?: 'button' | 'submit' | 'reset'
     disabled?: boolean
+    ariaLabel?: string
   }>(),
   {
     variant: 'default',
@@ -21,8 +32,10 @@ const properties = withDefaults(
   },
 )
 
+const isLink = computed(() => !!properties.to || !!properties.href)
+
 const is = computed(() => {
-  if (properties.to) return NuxtLink
+  if (properties.to) return resolveComponent('NuxtLink')
   if (properties.href) return 'a'
   return 'button'
 })
@@ -34,9 +47,11 @@ const is = computed(() => {
     :class="['btn', properties.radius, properties.class]"
     :to="properties.to"
     :href="properties.href"
-    :type="!properties.to && !properties.href ? properties.type : undefined"
-    :aria-disabled="properties.disabled || undefined"
-    :tabindex="properties.disabled && (properties.to || properties.href) ? -1 : undefined"
+    :type="!isLink ? properties.type : undefined"
+    :disabled="!isLink ? properties.disabled : undefined"
+    :aria-disabled="isLink && properties.disabled ? true : undefined"
+    :aria-label="properties.ariaLabel"
+    :tabindex="isLink && properties.disabled ? -1 : undefined"
     :data-variant="properties.variant"
     :data-size="properties.size"
   >
@@ -98,7 +113,7 @@ const is = computed(() => {
     @apply size-10;
   }
 
-  :not(&[data-size^='icon']) {
+  &:not([data-size^='icon']) {
     @apply active:scale-[.97];
   }
 }
