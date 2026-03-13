@@ -114,7 +114,7 @@ const is = computed(() => {
   }
 
   &:not([data-size^='icon']) {
-    @apply active:scale-[.97];
+    @apply hover:scale-105 active:scale-95;
   }
 }
 </style>
