@@ -5,8 +5,9 @@
     "package.json": "pnpm*"
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
+    "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "oxc.fmt.configPath": "oxfmt.config.ts",
+  "editor.defaultFormatter": "oxc.oxc-vscode"
 }
