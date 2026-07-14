@@ -11,17 +11,17 @@ const themeColor = computed(() => (props.isPro ? '124, 58, 237' : '34, 197, 94')
 
 <template>
   <div
-    class="relative h-full w-full items-center justify-center bg-white p-10 text-neutral-900 lg:p-[60px] dark:bg-neutral-900 dark:text-neutral-50"
+    class="relative size-full items-center justify-center bg-white p-10 text-neutral-900 lg:p-[60px] dark:bg-neutral-900 dark:text-neutral-50"
   >
     <!-- Gradient background -->
     <div
-      class="absolute top-0 right-0 bottom-0 left-0"
+      class="absolute inset-0"
       :style="{
         backgroundImage: `radial-gradient(ellipse 100% 100% at 100% 100%, rgba(${themeColor}, 0.15) 0%, transparent 60%)`,
       }"
     />
     <div
-      class="absolute top-0 right-0 bottom-0 left-0"
+      class="absolute inset-0"
       :style="{
         backgroundImage: `radial-gradient(ellipse 100% 100% at 0.1% 0.1%, rgba(${themeColor}, 0.1) 0%, transparent 50%)`,
       }"
@@ -30,7 +30,7 @@ const themeColor = computed(() => (props.isPro ? '124, 58, 237' : '34, 197, 94')
     <div class="relative w-full flex-col items-center justify-center gap-5 text-center lg:gap-8">
       <!-- Logo -->
       <div class="flex items-center gap-1">
-        <svg viewBox="0 0 64 64" class="h-10 w-10 lg:h-16 lg:w-16">
+        <svg viewBox="0 0 64 64" class="size-10 lg:size-16">
           <defs>
             <linearGradient :id="isPro ? 'nsLine2' : 'nsLine1'" x1="0%" y1="100%" x2="100%" y2="0%">
               <stop offset="0%" :stop-color="isPro ? '#7c3aed' : '#22c55e'" />

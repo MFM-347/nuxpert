@@ -91,10 +91,10 @@ defineOgImage('NuxtSeo')
         class="relative mx-auto max-w-5xl overflow-hidden rounded-[2.5rem] p-12 text-center glass-card md:p-24"
       >
         <div
-          class="absolute top-[-20%] right-[-10%] h-[50%] w-[50%] animate-pulse-glow rounded-full bg-primary/20 blur-[100px]"
+          class="absolute top-[-20%] right-[-10%] size-[50%] animate-pulse-glow rounded-full bg-primary/20 blur-[100px]"
         />
         <div
-          class="absolute bottom-[-20%] left-[-10%] h-[40%] w-[40%] animate-pulse-glow rounded-full bg-secondary/10 blur-[100px]"
+          class="absolute bottom-[-20%] left-[-10%] size-[40%] animate-pulse-glow rounded-full bg-secondary/10 blur-[100px]"
         />
         <div class="relative z-10 space-y-8">
           <h2 class="leading-[1.1]">Ready to build with Nuxt 4?</h2>
