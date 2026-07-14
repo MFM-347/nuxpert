@@ -133,7 +133,7 @@
   --popover: var(--color-slate-50);
   --popover-foreground: var(--color-slate-900);
 
-  --primary: var(--color-green-600);
+  --primary: var(--color-green-700);
   --primary-foreground: var(--color-slate-50);
 
   --secondary: var(--color-blue-600);
@@ -146,16 +146,16 @@
   --accent-foreground: var(--color-slate-900);
 
   --destructive: var(--color-red-600);
-  --success: var(--color-green-600);
+  --success: var(--color-green-700);
 
   --border: var(--color-slate-200);
   --input: var(--color-slate-200);
-  --ring: var(--color-green-500);
+  --ring: var(--color-green-600);
 
   --chart-1: var(--color-blue-500);
   --chart-2: var(--color-blue-600);
   --chart-3: var(--color-purple-600);
-  --chart-4: var(--color-green-600);
+  --chart-4: var(--color-green-700);
   --chart-5: var(--color-slate-600);
 
   --sidebar: var(--color-slate-100);
@@ -168,7 +168,7 @@
   --sidebar-accent-foreground: var(--color-slate-900);
 
   --sidebar-border: var(--color-slate-200);
-  --sidebar-ring: var(--color-green-500);
+  --sidebar-ring: var(--color-green-600);
 }
 
 .dark {
@@ -181,7 +181,7 @@
   --popover: var(--color-slate-800);
   --popover-foreground: var(--color-slate-50);
 
-  --primary: var(--color-green-500);
+  --primary: var(--color-green-600);
 
   --secondary: var(--color-blue-500);
   --secondary-foreground: var(--color-slate-50);
@@ -193,11 +193,11 @@
   --accent-foreground: var(--color-slate-50);
 
   --destructive: var(--color-red-500);
-  --success: var(--color-green-500);
+  --success: var(--color-green-600);
 
   --border: var(--color-slate-700);
   --input: var(--color-slate-700);
-  --ring: var(--color-green-500);
+  --ring: var(--color-green-600);
 
   --sidebar: var(--color-slate-800);
   --sidebar-foreground: var(--color-slate-50);

@@ -27,6 +27,11 @@ const statusText = computed(() => {
 useHead({
   title: `${status.value} - ${statusText.value}`,
 })
+
+defineOgImage('nuxt-seo', {
+  title: props.error.statusCode.toString(),
+  description: props.error.statusText
+})
 </script>
 
 <template>

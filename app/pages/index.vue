@@ -13,7 +13,7 @@ useSeo({
   },
 })
 useSeoMeta({ titleTemplate: '' })
-defineOgImageComponent('nuxt-seo')
+defineOgImage('NuxtSeo')
 </script>
 
 <template>

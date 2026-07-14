@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ['@vueuse/core'],
+      include: ['@vueuse/core', '@unhead/schema-org/vue', '@vueuse/core'],
     },
   },
 
@@ -22,11 +22,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/icon',
     '@nuxt/fonts',
-    '@nuxt/a11y',
-    '@nuxtjs/seo',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
     '@nuxtjs/fontaine',
+    '@nuxtjs/seo',
   ],
 
   icon: {
