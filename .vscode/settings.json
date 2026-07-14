@@ -1,7 +1,7 @@
 {
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.patterns": {
-    "nuxt.config.*": " prettier*, eslint*, .editorconfig",
+    "nuxt.config.*": " prettier*, eslint*, ox*.config.ts, .editorconfig",
     "package.json": "pnpm*"
   },
   "editor.codeActionsOnSave": {

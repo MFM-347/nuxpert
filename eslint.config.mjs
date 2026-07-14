@@ -18,6 +18,8 @@ export default withNuxt(
     rules: {
       'unicorn/no-abusive-eslint-disable': 'warn',
       'better-tailwindcss/enforce-consistent-line-wrapping': 'off',
+      'unicorn/filename-case': 'off',
+      'unicorn/name-replacements': 'off'
     },
   },
 )
