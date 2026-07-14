@@ -30,7 +30,7 @@ useHead({
 
 defineOgImage('nuxt-seo', {
   title: props.error.statusCode.toString(),
-  description: props.error.statusText
+  description: props.error.statusText,
 })
 </script>
 
