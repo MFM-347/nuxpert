@@ -11,7 +11,7 @@ useSeo({
   url: 'https://nuxpert.vercel.app/',
 })
 useSeoMeta({ titleTemplate: '' })
-defineOgImageComponent('nuxt-seo')
+defineOgImage('NuxtSeo')
 </script>
 
 <template>

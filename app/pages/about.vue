@@ -7,7 +7,6 @@ useSeo({
     'Nuxt 4 starter template with TypeScript, Tailwind CSS, accessibility & SEO—ready for production.',
   url: 'https://nuxpert.vercel.app/about',
 })
-defineOgImageComponent('nuxt-seo')
 </script>
 
 <template>
