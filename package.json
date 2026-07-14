@@ -12,8 +12,8 @@
     "type-check": "vue-tsc -b --noEmit",
     "lint": "oxlint && eslint",
     "lint:fix": "oxlint --fix && eslint --fix",
-    "format": "oxfmt src",
-    "format:check": "oxfmt src --check",
+    "format": "oxfmt app",
+    "format:check": "oxfmt app --check",
     "up": "taze major -I",
     "add": "nuxt add"
   },
